@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "timeinvitation:block/fern_stem_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "timeinvitation:block/fern_stem"
+    },
+    "axis=z": {
+      "model": "timeinvitation:block/fern_stem_horizontal",
+      "x": 90
+    }
+  }
+}

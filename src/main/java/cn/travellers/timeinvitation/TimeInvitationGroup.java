@@ -11,7 +11,7 @@ public class TimeInvitationGroup extends ItemGroup {
 
     @Override
     public ItemStack createIcon() {
-        return new ItemStack(ItemRegistry.oldVine.get());
+        return new ItemStack(ItemRegistry.oldVines.get());
     }
 
 }

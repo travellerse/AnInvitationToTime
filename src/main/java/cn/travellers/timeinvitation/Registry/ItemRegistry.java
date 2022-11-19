@@ -9,7 +9,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ItemRegistry {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Utils.MOD_ID);
-    public static final RegistryObject<Item> oldVine = ITEMS.register("vanity_kelp_item", () -> new BlockItem(BlockRegistry.oldVine, new Item.Properties().group(Utils.itemGroup)));
+    public static final RegistryObject<Item> oldVines = ITEMS.register("old_vines_item", () -> new BlockItem(BlockRegistry.oldVines, new Item.Properties().group(Utils.itemGroup)));
     public static final RegistryObject<BlockItem> fernStem = ITEMS.register("fern_stem_item",()-> new BlockItem(BlockRegistry.fernStem, new Item.Properties().group(Utils.itemGroup)));
     public static final RegistryObject<BlockItem> fernLeaves = ITEMS.register("fern_leaves_item",()-> new BlockItem(BlockRegistry.fernLeaves, new Item.Properties().group(Utils.itemGroup)));
 

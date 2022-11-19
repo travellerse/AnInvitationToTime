@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "timeinvitation:block/old_vines_plant"
+  }
+}

@@ -10,10 +10,10 @@ import net.minecraft.util.math.shapes.VoxelShape;
 
 import java.util.Random;
 
-public class OldVineTopBlock extends AbstractTopPlantBlock {
+public class OldVinesTopBlock extends AbstractTopPlantBlock {
     protected static final VoxelShape SHAPE = Block.makeCuboidShape(4.0D, 9.0D, 4.0D, 12.0D, 16.0D, 12.0D);
 
-    public OldVineTopBlock(Properties properties) {
+    public OldVinesTopBlock(Properties properties) {
         super(properties, Direction.DOWN, SHAPE, false, 0.1D);
     }
 
@@ -29,6 +29,6 @@ public class OldVineTopBlock extends AbstractTopPlantBlock {
 
     @Override
     protected Block getBodyPlantBlock() {
-        return BlockRegistry.oldVinePlant;
+        return BlockRegistry.oldVinesPlant;
     }
 }
