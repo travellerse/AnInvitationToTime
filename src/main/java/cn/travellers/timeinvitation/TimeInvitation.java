@@ -1,10 +1,10 @@
 package cn.travellers.timeinvitation;
 
-import cn.travellers.timeinvitation.Registry.BiomeRegistry;
-import cn.travellers.timeinvitation.Registry.BlockRegistry;
-import cn.travellers.timeinvitation.Registry.ItemRegistry;
+import cn.travellers.timeinvitation.Bimoe.TimeInvitationBiomes;
+import cn.travellers.timeinvitation.Registry.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -42,8 +42,8 @@ public class TimeInvitation {
         ItemRegistry.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         BlockRegistry.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         //FluidRegistry.FLUIDS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        //FeatureRegistry.FEATURE.register(FMLJavaModLoadingContext.get().getModEventBus());
-        //PlacementRegistry.PLACEMENT.register(FMLJavaModLoadingContext.get().getModEventBus());
+        FeatureRegistry.FEATURE.register(FMLJavaModLoadingContext.get().getModEventBus());
+        PlacementRegistry.PLACEMENT.register(FMLJavaModLoadingContext.get().getModEventBus());
         BiomeRegistry.BIOMES.register(FMLJavaModLoadingContext.get().getModEventBus());
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -83,9 +83,11 @@ public class TimeInvitation {
     @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         @SubscribeEvent
-        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
-            // register a new block here
-            LOGGER.info("HELLO from Register Block");
+        public static void onBiomeRegistry(FMLCommonSetupEvent event) {
+            BiomeManager.addBiome(BiomeManager.BiomeType.WARM,new BiomeManager.BiomeEntry(TimeInvitationBiomes.ANCIENT_FERN_FOREST,500));
+            BiomeManager.addBiome(BiomeManager.BiomeType.WARM,new BiomeManager.BiomeEntry(TimeInvitationBiomes.ANCIENT_FERN_FOREST_EDGE,500));
+            BiomeManager.addBiome(BiomeManager.BiomeType.WARM,new BiomeManager.BiomeEntry(TimeInvitationBiomes.MODIFIED_ANCIENT_FERN_FOREST,500));
+            BiomeManager.addBiome(BiomeManager.BiomeType.WARM,new BiomeManager.BiomeEntry(TimeInvitationBiomes.MODIFIED_ANCIENT_FERN_FOREST_EDGE,500));
         }
     }
 }

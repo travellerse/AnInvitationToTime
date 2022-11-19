@@ -8,8 +8,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class BiomeRegistry {
     public static final DeferredRegister<Biome> BIOMES = DeferredRegister.create(ForgeRegistries.BIOMES, Utils.MOD_ID);
-    public static Biome AncientFernForest = register("ancient_fern_forest", TimeInvitationBiomeMaker.makeAncientFernForest(0.1F, 0.2F,0.9F,false,false));
-
+    public static Biome AncientFernForest = register("ancient_fern_forest", TimeInvitationBiomeMaker.makeAncientFernForestBiome());
+    public static Biome AncientFernForestEdge = register("ancient_fern_forest_edge",TimeInvitationBiomeMaker.makeAncientFernForestEdgeBiome());
+    public static Biome ModifiedAncientFernForestEdge = register("modified_ancient_fern_forest_edge",TimeInvitationBiomeMaker.makeModifiedAncientFernForestEdgeBiome());
+    public static Biome ModifiedAncientFernForest = register("modified_ancient_fern_forest",TimeInvitationBiomeMaker.makeModifiedAncientFernForestBiome());
     public static Biome register(String name,Biome biome){
         BIOMES.register(name, ()->biome);
         return biome;
