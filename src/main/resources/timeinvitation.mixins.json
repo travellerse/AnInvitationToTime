@@ -3,7 +3,7 @@
   "minVersion": "0.8",
   "package": "cn.travellers.timeinvitation.Mixin",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "vanity.refmap.json",
+  "refmap": "timeinvitation.refmap.json",
   "mixins": [
 
   ],
