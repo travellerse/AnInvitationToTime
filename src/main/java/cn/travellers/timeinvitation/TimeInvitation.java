@@ -1,5 +1,6 @@
 package cn.travellers.timeinvitation;
 
+import cn.travellers.timeinvitation.Registry.BiomeRegistry;
 import cn.travellers.timeinvitation.Registry.BlockRegistry;
 import cn.travellers.timeinvitation.Registry.ItemRegistry;
 import net.minecraft.block.Block;
@@ -43,7 +44,7 @@ public class TimeInvitation {
         //FluidRegistry.FLUIDS.register(FMLJavaModLoadingContext.get().getModEventBus());
         //FeatureRegistry.FEATURE.register(FMLJavaModLoadingContext.get().getModEventBus());
         //PlacementRegistry.PLACEMENT.register(FMLJavaModLoadingContext.get().getModEventBus());
-        //BiomeRegistry.BIOMES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        BiomeRegistry.BIOMES.register(FMLJavaModLoadingContext.get().getModEventBus());
         MinecraftForge.EVENT_BUS.register(this);
     }
 
