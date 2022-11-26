@@ -2,10 +2,12 @@ package cn.travellers.timeinvitation.Registry;
 
 import cn.travellers.timeinvitation.Block.OldVinesBlock;
 import cn.travellers.timeinvitation.Block.OldVinesTopBlock;
+import cn.travellers.timeinvitation.Block.Trees.FernTree;
 import cn.travellers.timeinvitation.Utils;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
+import net.minecraft.block.trees.JungleTree;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
@@ -19,6 +21,8 @@ public class BlockRegistry {
     public static final Block oldVinesPlant = register("old_vines_plant",new OldVinesBlock(AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.NETHER_VINE)));
     public static final Block fernStem = register("fern_stem",createLogBlock(MaterialColor.WOOD, MaterialColor.OBSIDIAN));
     public static final Block fernLeaves = register("fern_leaves",createLeavesBlock());
+    public static final Block fernSeeds = register("fern_seeds", new SaplingBlock(new FernTree(), AbstractBlock.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().zeroHardnessAndResistance().sound(SoundType.PLANT)));
+
 
     public static <T extends Block> T register(String name,T block){
         BLOCKS.register(name,()->block);
